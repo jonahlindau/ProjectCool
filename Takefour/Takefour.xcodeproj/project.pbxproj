@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE21577A2A0AA9E800A72608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2157792A0AA9E800A72608 /* AppDelegate.swift */; };
+		CE21577C2A0AA9E800A72608 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21577B2A0AA9E800A72608 /* SceneDelegate.swift */; };
+		CE21577E2A0AA9E800A72608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21577D2A0AA9E800A72608 /* ViewController.swift */; };
+		CE2157812A0AA9E800A72608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE21577F2A0AA9E800A72608 /* Main.storyboard */; };
+		CE2157832A0AA9EA00A72608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2157822A0AA9EA00A72608 /* Assets.xcassets */; };
+		CE2157862A0AA9EA00A72608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2157842A0AA9EA00A72608 /* LaunchScreen.storyboard */; };
+		CE2157912A0AA9EA00A72608 /* TakefourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2157902A0AA9EA00A72608 /* TakefourTests.swift */; };
+		CE21579B2A0AA9EA00A72608 /* TakefourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21579A2A0AA9EA00A72608 /* TakefourUITests.swift */; };
+		CE21579D2A0AA9EA00A72608 /* TakefourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE21579C2A0AA9EA00A72608 /* TakefourUITestsLaunchTests.swift */; };
+		CE7F575A2A0AC3C900CFDE45 /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F57592A0AC3C900CFDE45 /* loginScreen.swift */; };
+		CE80896F2A0BEF6B00715913 /* accountCreatedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80896E2A0BEF6B00715913 /* accountCreatedScreen.swift */; };
+		CE8089712A0BEFA600715913 /* homeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8089702A0BEFA600715913 /* homeScreen.swift */; };
+		CEDBF2472A0AD4F900B5EC9D /* signupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDBF2462A0AD4F900B5EC9D /* signupScreen.swift */; };
+		CEDBF2492A0AF72D00B5EC9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDBF2482A0AF72D00B5EC9D /* GoogleService-Info.plist */; };
+		CEDBF24C2A0AF9E700B5EC9D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CEDBF24B2A0AF9E700B5EC9D /* FirebaseAuth */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE21578D2A0AA9EA00A72608 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE21576E2A0AA9E800A72608 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE2157752A0AA9E800A72608;
+			remoteInfo = Takefour;
+		};
+		CE2157972A0AA9EA00A72608 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE21576E2A0AA9E800A72608 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE2157752A0AA9E800A72608;
+			remoteInfo = Takefour;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE2157762A0AA9E800A72608 /* Takefour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Takefour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2157792A0AA9E800A72608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE21577B2A0AA9E800A72608 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE21577D2A0AA9E800A72608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE2157802A0AA9E800A72608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE2157822A0AA9EA00A72608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE2157852A0AA9EA00A72608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE2157872A0AA9EA00A72608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE21578C2A0AA9EA00A72608 /* TakefourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakefourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2157902A0AA9EA00A72608 /* TakefourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakefourTests.swift; sourceTree = "<group>"; };
+		CE2157962A0AA9EA00A72608 /* TakefourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakefourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE21579A2A0AA9EA00A72608 /* TakefourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakefourUITests.swift; sourceTree = "<group>"; };
+		CE21579C2A0AA9EA00A72608 /* TakefourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakefourUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE7F57592A0AC3C900CFDE45 /* loginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginScreen.swift; sourceTree = "<group>"; };
+		CE80896E2A0BEF6B00715913 /* accountCreatedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountCreatedScreen.swift; sourceTree = "<group>"; };
+		CE8089702A0BEFA600715913 /* homeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreen.swift; sourceTree = "<group>"; };
+		CEDBF2462A0AD4F900B5EC9D /* signupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupScreen.swift; sourceTree = "<group>"; };
+		CEDBF2482A0AF72D00B5EC9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE2157732A0AA9E800A72608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDBF24C2A0AF9E700B5EC9D /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2157892A0AA9EA00A72608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2157932A0AA9EA00A72608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE21576D2A0AA9E800A72608 = {
+			isa = PBXGroup;
+			children = (
+				CE2157782A0AA9E800A72608 /* Takefour */,
+				CE21578F2A0AA9EA00A72608 /* TakefourTests */,
+				CE2157992A0AA9EA00A72608 /* TakefourUITests */,
+				CE2157772A0AA9E800A72608 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2157772A0AA9E800A72608 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE2157762A0AA9E800A72608 /* Takefour.app */,
+				CE21578C2A0AA9EA00A72608 /* TakefourTests.xctest */,
+				CE2157962A0AA9EA00A72608 /* TakefourUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE2157782A0AA9E800A72608 /* Takefour */ = {
+			isa = PBXGroup;
+			children = (
+				CE2157792A0AA9E800A72608 /* AppDelegate.swift */,
+				CE21577B2A0AA9E800A72608 /* SceneDelegate.swift */,
+				CE21577D2A0AA9E800A72608 /* ViewController.swift */,
+				CE7F57592A0AC3C900CFDE45 /* loginScreen.swift */,
+				CE80896E2A0BEF6B00715913 /* accountCreatedScreen.swift */,
+				CEDBF2462A0AD4F900B5EC9D /* signupScreen.swift */,
+				CE8089702A0BEFA600715913 /* homeScreen.swift */,
+				CE21577F2A0AA9E800A72608 /* Main.storyboard */,
+				CE2157822A0AA9EA00A72608 /* Assets.xcassets */,
+				CE2157842A0AA9EA00A72608 /* LaunchScreen.storyboard */,
+				CE2157872A0AA9EA00A72608 /* Info.plist */,
+				CEDBF2482A0AF72D00B5EC9D /* GoogleService-Info.plist */,
+			);
+			path = Takefour;
+			sourceTree = "<group>";
+		};
+		CE21578F2A0AA9EA00A72608 /* TakefourTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE2157902A0AA9EA00A72608 /* TakefourTests.swift */,
+			);
+			path = TakefourTests;
+			sourceTree = "<group>";
+		};
+		CE2157992A0AA9EA00A72608 /* TakefourUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE21579A2A0AA9EA00A72608 /* TakefourUITests.swift */,
+				CE21579C2A0AA9EA00A72608 /* TakefourUITestsLaunchTests.swift */,
+			);
+			path = TakefourUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE2157752A0AA9E800A72608 /* Takefour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2157A02A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "Takefour" */;
+			buildPhases = (
+				CE2157722A0AA9E800A72608 /* Sources */,
+				CE2157732A0AA9E800A72608 /* Frameworks */,
+				CE2157742A0AA9E800A72608 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Takefour;
+			packageProductDependencies = (
+				CEDBF24B2A0AF9E700B5EC9D /* FirebaseAuth */,
+			);
+			productName = Takefour;
+			productReference = CE2157762A0AA9E800A72608 /* Takefour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE21578B2A0AA9EA00A72608 /* TakefourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2157A32A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "TakefourTests" */;
+			buildPhases = (
+				CE2157882A0AA9EA00A72608 /* Sources */,
+				CE2157892A0AA9EA00A72608 /* Frameworks */,
+				CE21578A2A0AA9EA00A72608 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE21578E2A0AA9EA00A72608 /* PBXTargetDependency */,
+			);
+			name = TakefourTests;
+			productName = TakefourTests;
+			productReference = CE21578C2A0AA9EA00A72608 /* TakefourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE2157952A0AA9EA00A72608 /* TakefourUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2157A62A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "TakefourUITests" */;
+			buildPhases = (
+				CE2157922A0AA9EA00A72608 /* Sources */,
+				CE2157932A0AA9EA00A72608 /* Frameworks */,
+				CE2157942A0AA9EA00A72608 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE2157982A0AA9EA00A72608 /* PBXTargetDependency */,
+			);
+			name = TakefourUITests;
+			productName = TakefourUITests;
+			productReference = CE2157962A0AA9EA00A72608 /* TakefourUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE21576E2A0AA9E800A72608 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CE2157752A0AA9E800A72608 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					CE21578B2A0AA9EA00A72608 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CE2157752A0AA9E800A72608;
+					};
+					CE2157952A0AA9EA00A72608 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CE2157752A0AA9E800A72608;
+					};
+				};
+			};
+			buildConfigurationList = CE2157712A0AA9E800A72608 /* Build configuration list for PBXProject "Takefour" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE21576D2A0AA9E800A72608;
+			packageReferences = (
+				CEDBF24A2A0AF9E700B5EC9D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = CE2157772A0AA9E800A72608 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE2157752A0AA9E800A72608 /* Takefour */,
+				CE21578B2A0AA9EA00A72608 /* TakefourTests */,
+				CE2157952A0AA9EA00A72608 /* TakefourUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE2157742A0AA9E800A72608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2157862A0AA9EA00A72608 /* LaunchScreen.storyboard in Resources */,
+				CEDBF2492A0AF72D00B5EC9D /* GoogleService-Info.plist in Resources */,
+				CE2157832A0AA9EA00A72608 /* Assets.xcassets in Resources */,
+				CE2157812A0AA9E800A72608 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE21578A2A0AA9EA00A72608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2157942A0AA9EA00A72608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE2157722A0AA9E800A72608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE21577E2A0AA9E800A72608 /* ViewController.swift in Sources */,
+				CE21577A2A0AA9E800A72608 /* AppDelegate.swift in Sources */,
+				CE7F575A2A0AC3C900CFDE45 /* loginScreen.swift in Sources */,
+				CE21577C2A0AA9E800A72608 /* SceneDelegate.swift in Sources */,
+				CE80896F2A0BEF6B00715913 /* accountCreatedScreen.swift in Sources */,
+				CEDBF2472A0AD4F900B5EC9D /* signupScreen.swift in Sources */,
+				CE8089712A0BEFA600715913 /* homeScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2157882A0AA9EA00A72608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2157912A0AA9EA00A72608 /* TakefourTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE2157922A0AA9EA00A72608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE21579D2A0AA9EA00A72608 /* TakefourUITestsLaunchTests.swift in Sources */,
+				CE21579B2A0AA9EA00A72608 /* TakefourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE21578E2A0AA9EA00A72608 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE2157752A0AA9E800A72608 /* Takefour */;
+			targetProxy = CE21578D2A0AA9EA00A72608 /* PBXContainerItemProxy */;
+		};
+		CE2157982A0AA9EA00A72608 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE2157752A0AA9E800A72608 /* Takefour */;
+			targetProxy = CE2157972A0AA9EA00A72608 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE21577F2A0AA9E800A72608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE2157802A0AA9E800A72608 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE2157842A0AA9EA00A72608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE2157852A0AA9EA00A72608 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE21579E2A0AA9EA00A72608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE21579F2A0AA9EA00A72608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE2157A12A0AA9EA00A72608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Takefour/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.Takefour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE2157A22A0AA9EA00A72608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Takefour/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.Takefour;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE2157A42A0AA9EA00A72608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.TakefourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Takefour.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Takefour";
+			};
+			name = Debug;
+		};
+		CE2157A52A0AA9EA00A72608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.TakefourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Takefour.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Takefour";
+			};
+			name = Release;
+		};
+		CE2157A72A0AA9EA00A72608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.TakefourUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Takefour;
+			};
+			name = Debug;
+		};
+		CE2157A82A0AA9EA00A72608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PRP4MZJYJL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLEndeavors.TakefourUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Takefour;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE2157712A0AA9E800A72608 /* Build configuration list for PBXProject "Takefour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE21579E2A0AA9EA00A72608 /* Debug */,
+				CE21579F2A0AA9EA00A72608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2157A02A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "Takefour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2157A12A0AA9EA00A72608 /* Debug */,
+				CE2157A22A0AA9EA00A72608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2157A32A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "TakefourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2157A42A0AA9EA00A72608 /* Debug */,
+				CE2157A52A0AA9EA00A72608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2157A62A0AA9EA00A72608 /* Build configuration list for PBXNativeTarget "TakefourUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2157A72A0AA9EA00A72608 /* Debug */,
+				CE2157A82A0AA9EA00A72608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEDBF24A2A0AF9E700B5EC9D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEDBF24B2A0AF9E700B5EC9D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDBF24A2A0AF9E700B5EC9D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE21576E2A0AA9E800A72608 /* Project object */;
+}
