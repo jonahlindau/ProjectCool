@@ -1,0 +1,6 @@
+framework module Pods_Takefour {
+  umbrella header "Pods-Takefour-umbrella.h"
+
+  export *
+  module * { export * }
+}
