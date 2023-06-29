@@ -1,5 +1,5 @@
 //
-//  sportsView.swift
+//  livebetsView.swift
 //  Takefour
 //
 //  Created by Jonah Lindau on 5/19/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class sportsView: UIViewController {
+class livesportsView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

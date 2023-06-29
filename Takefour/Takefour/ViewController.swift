@@ -33,16 +33,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         overrideUserInterfaceStyle = .light
     }
+  
+    
     
     @IBAction func btnTapped(_ sender: Any) {
-        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "loginScreen") as! loginScreen
-        self.navigationController?.pushViewController(storyboard, animated: true)
-    }
-    
-    @IBAction func signupTapped(_ sender: Any) {
-        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "signupScreen") as! signupScreen
-        self.navigationController?.pushViewController(storyboard, animated: true)
     }
 
+    @IBAction func signupTapped(_ sender: Any) {
+    }
+
+    
+    @IBAction func unwindToVC(unwindSegue: UIStoryboardSegue){}
 }
 

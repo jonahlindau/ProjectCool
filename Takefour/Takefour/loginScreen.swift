@@ -18,6 +18,7 @@ class loginScreen: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPassword: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,12 @@ class loginScreen: UIViewController {
             }
             else {
                 // Go to our home screen
-                self.performSegue(withIdentifier: "goToHome", sender: self)
+                self.performSegue(withIdentifier: "goToNext", sender: self)
             }
         }
     }
     
-
+    @IBAction func backButtonClicked(_ sender: Any) {
+    }
+    
 }

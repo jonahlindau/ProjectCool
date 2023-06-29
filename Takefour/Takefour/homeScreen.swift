@@ -8,22 +8,61 @@
 import UIKit
 
 class homeScreen: UIViewController {
+    
 
+    @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var livebetsView: UIView!
+    @IBOutlet weak var leaguesView: UIView!
+    @IBOutlet weak var betslipView: UIView!
+    @IBOutlet weak var sportsView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         overrideUserInterfaceStyle = .light
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func homeButton(_ sender: Any) {
+        self.homeView.alpha = 1
+        self.livebetsView.alpha = 0
+        self.leaguesView.alpha = 0
+        self.betslipView.alpha = 0
+        self.sportsView.alpha = 0
     }
-    */
+    
+    @IBAction func livebetsButton(_ sender: Any) {
+        self.homeView.alpha = 0
+        self.livebetsView.alpha = 1
+        self.leaguesView.alpha = 0
+        self.betslipView.alpha = 0
+        self.sportsView.alpha = 0
+    }
+    
+    @IBAction func leaguesButton(_ sender: Any) {
+        self.homeView.alpha = 0
+        self.livebetsView.alpha = 0
+        self.leaguesView.alpha = 1
+        self.betslipView.alpha = 0
+        self.sportsView.alpha = 0
+    }
+    
+    @IBAction func betslipButton(_ sender: Any) {
+        self.homeView.alpha = 0
+        self.livebetsView.alpha = 0
+        self.leaguesView.alpha = 0
+        self.betslipView.alpha = 1
+        self.sportsView.alpha = 0
+    }
+    
+    @IBAction func sportsButton(_ sender: Any) {
+        self.homeView.alpha = 0
+        self.livebetsView.alpha = 0
+        self.leaguesView.alpha = 0
+        self.betslipView.alpha = 0
+        self.sportsView.alpha = 1
+    }
+    
+    @IBAction func unwindToHome(unwindSegue: UIStoryboardSegue){}
 
 }
