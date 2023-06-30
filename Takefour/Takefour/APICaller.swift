@@ -33,11 +33,6 @@ final class APICaller {
                     completion(.success(apiResponseWrapper.responses))
                     
                     let apiResponseArray = apiResponseWrapper.responses
-                    
-                    for response in apiResponseArray {
-                        print("Sport Title: \(response.sport_title)")
-                    }
-                    
                 }
                 catch {
                     completion(.failure(error))
@@ -68,7 +63,7 @@ struct APIResponse: Codable {
     let home_team: String
     let away_team: String
     let commence_time: String
-    let bookmakers: [Bookmakers]
+    let bookmakers: [Bookmakers]?
 }
 
 struct Bookmakers: Codable {

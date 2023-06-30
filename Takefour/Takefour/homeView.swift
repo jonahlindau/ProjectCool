@@ -21,23 +21,29 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 21/255, green: 38/255, blue: 52/255, alpha: 1.0)
+        tableView.register(homeTableViewCell.self, forCellReuseIdentifier: homeTableViewCell.identifier)
 
+        
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
         
-        APICaller.shared.getTeams { [weak self] apiResponseWrapper in
-            switch apiResponseWrapper {
+        APICaller.shared.getTeams { [weak self] result in
+            switch result {
             case .success(let responses):
-                self?.viewModels = responses.compactMap({
-                    homeTableViewCellViewModel(
-                        sport_title: $0.sport_title,
-                        home_team: $0.home_team,
-                        away_team: $0.away_team,
-                        commence_time: $0.commence_time
-                    )
+                self?.viewModels = responses.compactMap({ response in
+                        let markets = response.bookmakers?.flatMap({ $0.markets}) ?? []
+                        let viewModel = homeTableViewCellViewModel(
+                        sport_title: response.sport_title,
+                        home_team: response.home_team,
+                        away_team: response.away_team,
+                        commence_time: response.commence_time,
+                        markets: markets
+                        )
+                        viewModel.printKeyAndPriceData()
+                        return viewModel
                 })
-                
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -51,6 +57,10 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+    }
+    
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         return "Header"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,4 +82,8 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125
+    }
+    
 }
