@@ -26,12 +26,9 @@ final class APICaller {
                 completion(.failure(error))
             }
             else if let data = data {
-                
                 do {
                     let apiResponseWrapper = try JSONDecoder().decode(APIResponseWrapper.self, from: data)
-                    
                     completion(.success(apiResponseWrapper.responses))
-                    
                     let apiResponseArray = apiResponseWrapper.responses
                 }
                 catch {
@@ -39,7 +36,6 @@ final class APICaller {
                 }
             }
         }
-        
         task.resume()
     }
 }
