@@ -15,7 +15,7 @@ class homeTableViewCellViewModel {
     let markets: [Markets]
     var outcomes: [Outcomes]
     
-    let ml = "Moneyline"
+    
     
     func printKeyAndPriceData() {
         print("Sport Title: \(sport_title)")
@@ -25,7 +25,8 @@ class homeTableViewCellViewModel {
             for market in markets {
                 print("Key: \(market.key)")
                 for outcome in market.outcomes {
-                    print("Outcome Price: \(outcome.price)")
+                    print("Outcome H2H: \(outcome.hth)")
+                    print("Outcome Spread: \(outcome.spread)")
                 }
             }
         }
@@ -88,6 +89,13 @@ class homeTableViewCell: UITableViewCell {
         return label
     }()
     
+    private let spreadLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 8, weight: .regular)
+        label.textColor = .white
+        return label
+    }()
+    
     private let h2hHomeOddsButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 21/255, green: 38/255, blue: 52/255, alpha: 1.0)
@@ -98,6 +106,24 @@ class homeTableViewCell: UITableViewCell {
     }()
 
     private let h2hAwayOddsButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(red: 21/255, green: 38/255, blue: 52/255, alpha: 1.0)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        button.layer.cornerRadius = 5
+        return button
+    }()
+    
+    private let homeSpread: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor(red: 21/255, green: 38/255, blue: 52/255, alpha: 1.0)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 12, weight: .regular)
+        button.layer.cornerRadius = 5
+        return button
+    }()
+    
+    private let awaySpread: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 21/255, green: 38/255, blue: 52/255, alpha: 1.0)
         button.setTitleColor(.white, for: .normal)
@@ -123,9 +149,14 @@ class homeTableViewCell: UITableViewCell {
         contentView.addSubview(h2hHomeOddsButton)
         contentView.addSubview(h2hAwayOddsButton)
         contentView.addSubview(mlLabel)
+        contentView.addSubview(homeSpread)
+        contentView.addSubview(awaySpread)
+        contentView.addSubview(spreadLabel)
         
         setButtonOutline(button: h2hHomeOddsButton)
         setButtonOutline(button: h2hAwayOddsButton)
+        setButtonOutline(button: homeSpread)
+        setButtonOutline(button: awaySpread)
     }
     
     required init?(coder: NSCoder) {
@@ -183,13 +214,15 @@ class homeTableViewCell: UITableViewCell {
         awayTeamLabel.text = viewModel.away_team
         commenceTimeLabel.text = viewModel.commence_time
         
+        let ml = "Moneyline"
+        
         mlLabel.text = "Moneyline"
         
         // Since 'markets' is an array, you might want to process it accordingly,
         // for example, you can access the first market (if available) like this:
         if viewModel.outcomes.count >= 2 {
-            let homeOdds = viewModel.outcomes[0].price
-            let awayOdds = viewModel.outcomes[1].price
+            let homeOdds = viewModel.outcomes[0].hth
+            let awayOdds = viewModel.outcomes[1].hth
             h2hHomeOddsButton.setTitle(String(homeOdds), for: .normal)
             h2hAwayOddsButton.setTitle(String(awayOdds), for: .normal)
         } else {

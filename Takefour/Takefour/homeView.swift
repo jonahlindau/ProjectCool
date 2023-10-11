@@ -31,9 +31,6 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        func toInt(_ string: String) -> Int? {
-            return Int(string)
-        }
         
         APICaller.shared.getTeams { [weak self] result in
             switch result {
@@ -43,7 +40,7 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     let markets = response.bookmakers?.flatMap({ $0.markets }) ?? []
                     let outcomes: [Outcomes] = markets.flatMap { market in
                         market.outcomes.compactMap{ outcome in
-                            return Outcomes(price: outcome.price)
+                            return Outcomes(hth: outcome.hth, spread: outcome.spread)
                         }
                     }
                     let viewModel = homeTableViewCellViewModel(
@@ -68,7 +65,7 @@ class homeView: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     let markets = response.bookmakers?.flatMap { $0.markets } ?? []
                     let outcomes: [Outcomes] = markets.flatMap { market in
                         market.outcomes.compactMap { outcome in
-                            return Outcomes(price: outcome.price)
+                            return Outcomes(hth: outcome.hth, spread: outcome.spread)
                         }
                     }
                     return homeTableViewCellViewModel(

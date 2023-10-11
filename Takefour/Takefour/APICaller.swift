@@ -11,10 +11,36 @@ final class APICaller {
     static let shared = APICaller()
     
     struct Constants {
-        static let matchup = URL(string: "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=032065cd81002cdb9c61dd3d93558e66&regions=us&markets=h2h&oddsFormat=american&bookmakers=fanduel")
+        static let matchup = URL(string: "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=032065cd81002cdb9c61dd3d93558e66&regions=us&markets=h2h,spreads&oddsFormat=american&bookmakers=fanduel")
     }
     
     private init() {}
+    
+//    public func getTeams(completion: @escaping (Result<[APIResponse], Error>) -> Void) {
+//        guard let url = Constants.matchup else {
+//            let error = NSError(domain: "com.JLEndeavors.Takefour.APIcaller", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid API URL"])
+//            completion(.failure(error))
+//            return
+//        }
+//
+//        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+//            if let error = error {
+//                completion(.failure(error))
+//            }
+//            else if let data = data {
+//                do {
+//                    let apiResponseWrapper = try JSONDecoder().decode(APIResponseWrapper.self, from: data)
+//                    completion(.success(apiResponseWrapper.responses))
+////                    let apiResponseArray = apiResponseWrapper.responses
+//                } catch {
+//                    completion(.failure(error))
+//                }
+//            }
+//        }
+//        task.resume()
+//    }
+//}
+    
     
     public func getTeams(completion: @escaping (Result<[APIResponse], Error>) -> Void) {
         guard let url = Constants.matchup else{
@@ -39,6 +65,7 @@ final class APICaller {
         task.resume()
     }
 }
+
 
 
 struct APIResponseWrapper: Codable {
@@ -72,5 +99,6 @@ struct Markets: Codable {
 }
 
 struct Outcomes: Codable {
-    let price: Int
+    let hth: Int
+    let spread: Int
 }
